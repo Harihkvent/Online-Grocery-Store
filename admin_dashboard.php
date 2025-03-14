@@ -16,6 +16,13 @@ include("connect.php");
   </style>
 </head>
 <body>
+  <nav>
+    <?php if(isset($_SESSION['email'])): ?>
+      <a href="logout.php">Logout</a>
+    <?php else: ?>
+      <a href="login.php">Login</a>
+    <?php endif; ?>
+  </nav>
   <div class="container">
     <h1>Admin Dashboard</h1>
     <nav>
