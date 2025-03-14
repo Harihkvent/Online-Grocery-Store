@@ -150,9 +150,12 @@ nav a:hover {
 }
 
 .item-card img {
-  width: 100%;
-  border-radius: 8px;
+  width: 100%; /* Ensures images fill the container */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 8px 8px 0 0;
 }
+
 
 .item-card h3 {
   margin: 15px 0 10px;
