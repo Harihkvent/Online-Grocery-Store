@@ -1,137 +1,135 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"poppins",sans-serif;
-}
-body{
-    background-color: #c9d6ff;
-    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
-}
-.container{
-    background:#fff;
-    width:450px;
-    padding:1.5rem;
-    margin:50px auto;
-    border-radius:10px;
-    box-shadow:0 20px 35px rgba(0,0,1,0.9);
-}
-form{
-    margin:0 2rem;
-}
-.form-title{
-    font-size:1.5rem;
-    font-weight:bold;
-    text-align:center;
-    padding:1.3rem;
-    margin-bottom:0.4rem;
-}
-input{
-    color:inherit;
-    width:100%;
-    background-color:transparent;
-    border:none;
-    border-bottom:1px solid #757575;
-    padding-left:1.5rem;
-    font-size:15px;
-}
-.input-group{
-    padding:1% 0;
-    position:relative;
+/* Import a professional sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+/* Global Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.input-group i{
-    position:absolute;
-    color:black;
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('images/grocery-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
 }
-input:focus{
-    background-color: transparent;
-    outline:transparent;
-    border-bottom:2px solid hsl(327,90%,28%);
-}
-input::placeholder{
-    color:transparent;
-}
-label{
-    color:#757575;
-    position:relative;
-    left:1.2em;
-    top:-1.3em;
-    cursor:auto;
-    transition:0.3s ease all;
-}
-input:focus~label,input:not(:placeholder-shown)~label{
-    top:-3em;
-    color:hsl(327,90%,28%);
-    font-size:15px;
-}
-.recover{
-    text-align:right;
-    font-size:1rem;
-    margin-bottom:1rem;
 
+/* Container Styles */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  width: 360px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+  position: relative;
 }
-.recover a{
-    text-decoration:none;
-    color:rgb(125,125,235);
+
+/* Logo/Header Image for Grocery Store Feel */
+.container::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: url('images/store-logo.png') no-repeat center center;
+  background-size: contain;
 }
-.recover a:hover{
-    color:blue;
-    text-decoration:underline;
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 500;
 }
-.btn{
-    font-size:1.1rem;
-    padding:8px 0;
-    border-radius:5px;
-    outline:none;
-    border:none;
-    width:100%;
-    background:rgb(125,125,235);
-    color:white;
-    cursor:pointer;
-    transition:0.9s;
+
+/* Input Group Styling */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
 }
-.btn:hover{
-    background:#07001f;
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
 }
-.or{
-    font-size:1.1rem;
-    margin-top:0.5rem;
-    text-align:center;
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 14px;
 }
-.icons{
-    text-align:center;
+.input-group input:focus {
+  border-color: #4CAF50;
 }
-.icons i{
-    color:rgb(125,125,235);
-    padding:0.8rem 1.5rem;
-    border-radius:10px;
-    font-size:1.5rem;
-    cursor:pointer;
-    border:2px solid #dfe9f5;
-    margin:0 15px;
-    transition:1s;
+.input-group label {
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0 5px;
+  font-size: 12px;
+  color: #666;
 }
-.icons i:hover{
-    background:#07001f;
-    font-size:1.6rem;
-    border:2px solid rgb(125,125,235);
+
+/* Button Styling */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
 }
-.links{
-    display:flex;
-    justify-content:space-around;
-    padding:0 4rem;
-    margin-top:0.9rem;
-    font-weight:bold;
+.btn:hover {
+  background: #43a047;
 }
-button{
-    color:rgb(125,125,235);
-    border:none;
-    background-color:transparent;
-    font-size:1rem;
-    font-weight:bold;
+
+/* Links & Additional Options */
+.links {
+  text-align: center;
+  margin-top: 20px;
 }
-button:hover{
-    text-decoration:underline;
-    color:blue;
+.links p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+.links button {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.links button:hover {
+  color: #388e3c;
+}
+
+/* Recover Password Link */
+.recover a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-size: 14px;
+  transition: text-decoration 0.3s ease;
+}
+.recover a:hover {
+  text-decoration: underline;
 }
