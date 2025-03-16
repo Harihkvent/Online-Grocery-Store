@@ -55,21 +55,148 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #f9f9f9; margin: 0; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { color: #2E7D32; }
-        .form-group { margin-bottom: 15px; }
-        label { font-weight: bold; }
-        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        .btn { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 5px; }
-        .btn:hover { background: #388E3C; }
-        .order-list { margin-top: 20px; }
-        .order-item { padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; background: #f4f4f4; }
-        .cancel-btn { background: #D32F2F; border: none; color: white; padding: 8px 12px; cursor: pointer; border-radius: 5px; margin-top: 10px; }
-        .cancel-btn:hover { background: #B71C1C; }
+      /* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  position: sticky; /* keeps the nav at the top */
+  top: 0;
+  z-index: 1000;    /* ensures the nav is above other elements */
+}
+
+nav a {
+  color: #FF5722;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e64a19;
+}
+
+/* Main Container */
+.container {
+  max-width: 800px;
+  margin: 80px auto 20px auto; /* 80px top margin so content sits below sticky nav */
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  color: #2E7D32;
+  margin-top: 0;
+}
+
+/* Form and Inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #388E3C;
+}
+
+.cancel-btn {
+  background: #D32F2F;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background: #B71C1C;
+}
+
+/* Order List */
+.order-list {
+  margin-top: 20px;
+}
+
+.order-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #f4f4f4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 80px 10px 20px 10px; /* same top margin for sticky nav */
+    padding: 15px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
     </style>
 </head>
 <body>
+    <nav>
+    <a href="homepage.php">Home</a>
+    <a href="homepage.php">Shop</a>
+    <a href="categories.php">Categories</a>
+    <a href="cart.php">cart</a>
+    <a href="profile.php">Profile</a>
+    <a href="contact.php">Contact Us</a>
+    <?php if(isset($_SESSION['email'])): ?>
+      <a href="logout.php">Logout</a>
+    <?php else: ?>
+      <a href="login.php">Login</a>
+    <?php endif; ?>
+  </nav>
 
 <div class="container">
     <h2>My Profile</h2>
