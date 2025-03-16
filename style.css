@@ -86,7 +86,7 @@ body {
 .btn {
   width: 100%;
   padding: 12px;
-  background: #4CAF50;
+  background: #FF5722;
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -97,7 +97,7 @@ body {
   margin-top: 10px;
 }
 .btn:hover {
-  background: #43a047;
+  background: #FF5722;
 }
 
 /* Links & Additional Options */
