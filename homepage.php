@@ -20,7 +20,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  background: #FF5722;
   padding: 25px 20px;
   color: white;
   text-align: center;
@@ -292,7 +292,7 @@ footer {
             echo '<h3>' . htmlspecialchars($item['name']) . '</h3>';
             
             // Display price
-            echo '<p>$' . number_format($item['price'], 2) . '</p>';
+            echo '<p>Rs' . number_format($item['price'], 2) . '</p>';
             
             // Display description
             if(!empty($item['description'])) {
