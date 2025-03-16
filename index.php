@@ -63,9 +63,6 @@
               <input type="password" name="password" id="password" placeholder="Password" required>
               <label for="password">Password</label>
           </div>
-          <p class="recover">
-            <a href="#">Recover Password</a>
-          </p>
          <input type="submit" class="btn" value="Sign In" name="signIn">
         </form>
   
