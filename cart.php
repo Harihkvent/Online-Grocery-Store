@@ -76,7 +76,7 @@ if (isset($_GET['action'])) {
       padding: 0;
     }
     header {
-      background: #4CAF50;
+      background: #FF5722;
       padding: 20px;
       text-align: center;
       color: #fff;
