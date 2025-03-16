@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = mysqli_real_escape_string($conn, $_POST['fullName']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']); // ✅ Added phone number
+
     $total = 0;
 
     // Check if cart is set and not empty
@@ -25,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $total += $item['price'] * $item['quantity'];
     }
 
-    // Insert order details into 'orders' table
-    $orderSql = "INSERT INTO orders (fullName, email, address, total, created_at) 
-                 VALUES ('$fullName', '$email', '$address', '$total', NOW())";
+    // ✅ Insert order details into 'orders' table (Including Phone Number)
+    $orderSql = "INSERT INTO orders (fullName, email, phone, address, total, created_at) 
+                 VALUES ('$fullName', '$email', '$phone', '$address', '$total', NOW())"; 
 
     if (mysqli_query($conn, $orderSql)) {
         $order_id = mysqli_insert_id($conn);
