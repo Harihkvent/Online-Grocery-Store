@@ -185,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="name">Item Name:</label>
     <input type="text" id="name" name="name" required>
     
-    <label for="price">Price ($):</label>
+    <label for="price">Price (Rs):</label>
     <input type="number" step="0.01" id="price" name="price" required>
     
     <label for="stock">Stock Quantity:</label>
