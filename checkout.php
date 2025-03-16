@@ -121,6 +121,7 @@ $total = 0;
         <input type="text" name="fullName" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="text" name="address" placeholder="Shipping Address" required>
+        <input type="text" name="phone" placeholder="phone" required>
         <input type="submit" value="Place Order">
       </form>
     <?php else: ?>
