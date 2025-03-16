@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Register</h1>
-      <form method="post" action="register.php">
+    <h1 class="form-title">Register</h1>
+    <form method="post" action="register.php">
         <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input type="text" name="fName" id="fName" placeholder="First Name" required>
-           <label for="fname">First Name</label>
+            <i class="fas fa-user"></i>
+            <input type="text" name="fName" id="fName" placeholder="First Name" required>
+            <label for="fName">First Name</label>
         </div>
         <div class="input-group">
             <i class="fas fa-user"></i>
@@ -31,13 +31,24 @@
             <input type="password" name="password" id="password" placeholder="Password" required>
             <label for="password">Password</label>
         </div>
-       <input type="submit" class="btn" value="Sign Up" name="signUp">
-      </form>
-      <div class="links">
-        <p>Already Have Account ?</p>
+        <div class="input-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" name="address" id="address" placeholder="Address" required>
+            <label for="address">Address</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+            <label for="phone">Phone Number</label>
+        </div>
+        <input type="submit" class="btn" value="Sign Up" name="signUp">
+    </form>
+    <div class="links">
+        <p>Already Have an Account?</p>
         <button id="signInButton">Sign In</button>
-      </div>
     </div>
+</div>
+
 
     <div class="container" id="signIn">
         <h1 class="form-title">Sign In</h1>
