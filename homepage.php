@@ -232,6 +232,7 @@ footer {
     <a href="homepage.php">Shop</a>
     <a href="categories.php">Categories</a>
     <a href="cart.php">cart</a>
+    <a href="profile.php">Profile</a>
     <a href="contact.php">Contact Us</a>
     <?php if(isset($_SESSION['email'])): ?>
       <a href="logout.php">Logout</a>
